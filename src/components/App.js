@@ -5,23 +5,22 @@ class App extends Component {
     constructor(props) {
 		super(props);
 		this.state={
-			par:'',
+			par:false,
 		};
+		this.pText=this.pText.bind(this);
 	};
+
+	pText()
+	{
+		this.setState({par:true})
+	}
     render() {
-		const change = ()=>
-		{
-			this.setState({par:"hi"})
-		};
-
-
     	return(
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
+				{this.state.par && <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
 
-				<p id="para">{this.state.par}</p>
-
-				<button id="click" onClick={this.change}>Click Me</button>
+				<button id="click" onClick={this.pText}>Click Me</button>
     		</div>
     	);
     }
