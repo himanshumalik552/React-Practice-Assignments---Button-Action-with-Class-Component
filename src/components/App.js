@@ -18,7 +18,7 @@ class App extends Component {
     	return(
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
-				{this.state.par && <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
+				{this.state.par && <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
 
 				<button id="click" onClick={this.pText}>Click Me</button>
     		</div>
